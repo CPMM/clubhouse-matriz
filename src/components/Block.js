@@ -17,8 +17,8 @@ export const Block = ({
       <div className="stories">
         {stories
           .filter(s => {
-            console.log(title);
-            console.log(s.name.indexOf(title) >= 0);
+            console.log(member, s.owner_ids);
+            console.log(s.owner_ids.indexOf(member));
             if (!member && !title && !id) return s;
             if (
               (member && s.owner_ids.indexOf(member) >= 0) ||

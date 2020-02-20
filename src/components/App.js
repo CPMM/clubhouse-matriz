@@ -18,14 +18,7 @@ function App() {
   const [nourg_noimp, set_nourg_noimp] = useState([]);
 
   const getData = member => {
-    const promises = config.QUERIES.map(q =>
-      getStories(
-        q
-        // `${q} ${member ? "owner:" + member : ""} ${
-        //   title ? `title:${title}` + title : ""
-        // } ${id ? `id:${id}` : ""}`
-      )
-    );
+    const promises = config.QUERIES.map(q => getStories(q));
     promises.push(getMembers());
     Promise.all(promises).then(r => {
       setLoading(false);
@@ -59,7 +52,7 @@ function App() {
         <select name="members" onChange={e => setMember(e.target.value)}>
           <option value="">Todos los desarrolladores</option>
           {members.map(m => (
-            <option key={m.id} value={m.profile.id}>
+            <option key={m.id} value={m.id}>
               {m.profile.name}
             </option>
           ))}
