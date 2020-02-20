@@ -1,0 +1,10 @@
+TOKEN: 
+5e4d8619-18b2-438e-aedb-f69f5e617cd2
+OBTEBER PROYECTOS: 
+https://api.clubhouse.io/api/v3/projects?token=5e4d8619-18b2-438e-aedb-f69f5e617cd2
+
+OBTENER HISTORIAS 
+https://api.clubhouse.io/api/v3/search/stories?token=5e4d8619-18b2-438e-aedb-f69f5e617cd2
+    - IMPORTANTES: {"query": "label:importante"}
+    - NO URGENTES: {"query": label:\"no urgente\"}
+    - IMPORTANTE NO URGENTE: {"query": "label:importante label:\"no urgente\""}
