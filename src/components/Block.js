@@ -23,7 +23,7 @@ export const Block = ({
   return (
     <div className="block">
       <header style={{ backgroundColor: color }}>
-        {header} : {stories.length}{" "}
+        {header} : {arr.length}{" "}
       </header>
       <div className="stories">
         {stories

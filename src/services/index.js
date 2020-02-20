@@ -1,7 +1,7 @@
 import config from "../config";
 const getStories = async function(query) {
   const { URL, CLUBHOUSE_API_TOKEN } = config;
-  const url = `${URL}/search/stories?token=${CLUBHOUSE_API_TOKEN}&query=${query}`;
+  const url = `${URL}/search/stories?token=${CLUBHOUSE_API_TOKEN}&query=${query}&page_size=25`;
   try {
     const response = await fetch(url);
     const data = await response.json();
